@@ -45,12 +45,5 @@ subplot(2,3,5), imshow(o2);
 title('B,G,R');
 subplot(2,3,6), imshow(o3);
 title('G,R,B');
-
-%1,2,3 no
-%1,3,2 no
-%2,1,3 si
-%2,3,1 no
-%3,1,2 no 
-%3,2,1 si
 end
 
