@@ -1,10 +1,10 @@
-function [] = ej21(f)
+function [] = ej21()
 % file is the name of the image
 %ej21 This function illustrates the effect of resizing and smoothing with 
 %different 1D and 2D masks 
 close all;
 
-im=imread(f); 
+im=imread('./images/cruis.jpg'); 
 % e.g. im=imread('./images/cruis.jpg');
 imGray=rgb2gray(im);
 resizedIm=imresize(imGray, 2);
