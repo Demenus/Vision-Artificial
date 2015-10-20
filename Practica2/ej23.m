@@ -11,11 +11,18 @@ highim1 = im1 - lowim1;
 lowim2 = imfilter(im2, h2);
 
 figure; 
-subplot(2, 3, 1); imshow(highim1);
-subplot(2, 3, 2); imshow(lowim2);
+subplot(2, 5, 1); imshow(highim1);
+subplot(2, 5, 2); imshow(lowim2);
 
 out = highim1 + lowim2;
-subplot(2, 3, 3); imshow(out);
+subplot(2, 5, 3); imshow(out);
+
+out1 = impyramid(out, 'reduce');
+out2 = impyramid(out1, 'reduce');
+
+subplot(2,5,4), imshow(out1);
+subplot(2,5,5), imshow(out2);
+
 
 %optional
 imh = imread('./images/hamster.jpg');
@@ -33,12 +40,16 @@ lowimh = imfilter(imh, h3);
 highimh = imh - lowimh;
 lowimc = imfilter(imc, h4);
 
-subplot(2, 3, 4); imshow(highimh);
-subplot(2, 3, 5); imshow(lowimc);
+subplot(2, 5, 6); imshow(highimh);
+subplot(2, 5, 7); imshow(lowimc);
 
-out2 = highimh + lowimc;
-subplot(2, 3, 6); imshow(out2);
+out = highimh + lowimc;
+subplot(2, 5, 8); imshow(out);
 
+out1 = impyramid(out, 'reduce');
+out2 = impyramid(out1, 'reduce');
 
+subplot(2,5,9), imshow(out1);
+subplot(2,5,10), imshow(out2);
 end
 
